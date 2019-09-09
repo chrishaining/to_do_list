@@ -8,16 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
         {name: "walk the dog", priority: "high"},
         {name: "mow the lawn", priority: "low"},
       ],
-      newTask: ""
+      newTask: "" //{name: "", priority: ""}
     },
     methods: {
       saveNewTask: function () {
-        this.tasks.push({name: this.newTask, priority: "low"});
+        // if (this.newTask !== "") { }
+        // this.tasks.push({name: this.newTask.name, priority: this.newTask.priority});
+        this.tasks.push({name: this.newTask.name, priority: "low"}) ;
         this.newTask = ""
       },
 
     }
   })
+
+
 
 
 })

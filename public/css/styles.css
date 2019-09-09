@@ -1,0 +1,26 @@
+
+ul {
+  list-style-type: none;
+}
+
+li.high {
+  border: red;
+  color: red;
+}
+
+li.low {
+  border: green;
+}
+
+#priority {
+  padding: 1em;
+}
+
+button {
+  padding: 1em;
+  background-color: #2F2FA2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8%;
+}
