@@ -5,16 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
     {el: "#app",
     data: {
       tasks: [
-        {name: "walk the dog", priority: "high"},
-        {name: "mow the lawn", priority: "low"},
+        {name: "walk the dog"},
+        {name: "mow the lawn"},
       ],
-      newTask: "" //{name: "", priority: ""}
+      newTask: ""
     },
     methods: {
       saveNewTask: function () {
         // if (this.newTask !== "") { }
         // this.tasks.push({name: this.newTask.name, priority: this.newTask.priority});
-        this.tasks.push({name: this.newTask.name, priority: "low"}) ;
+        this.tasks.push({name: this.newTask.name}) ;
         this.newTask = ""
       },
 

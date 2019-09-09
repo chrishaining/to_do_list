@@ -10,6 +10,9 @@
   <h1>To Do List</h1>
   <div id="app">
 
+    <input type="text" v-model="newTask">
+    <button v-on:click="saveNewTask">Save task</button>
+
     <ul>
       <li v-for="(task) in tasks">
         <span>{{ task.name }}</span>
@@ -19,35 +22,35 @@
       </li>
     </ul>
 
-    <input type="text" v-model="newTask">
+
 
     <!-- <input class="radio" type="radio" name="skill" value="high">High</input> -->
-    <input type="radio" v-model="priority" value="high">High</input>
+    <!-- <input type="radio" v-model="priority" value="high">High</input> -->
 
-    <input type="radio" v-model="priority" value="low">Low</input>
+    <!-- <input type="radio" v-model="priority" value="low">Low</input> -->
     <!-- <span>Priority: {{priority}}</span> -->
-    <button v-on:click="saveNewTask">Save task</button>
+
   </div>
 
-<!-- ****** -->
+  <!-- ****** -->
 
 
 
 
   <!-- <section>
-    <h3>binding value</h3>
-    <input type="radio" v-model="gender" v-bind:value="a">man
-    <input type="radio" v-model="gender" v-bind:value="b">woman
-    <br />
-    <span>value: {{gender}}</span>
-  </section> -->
+  <h3>binding value</h3>
+  <input type="radio" v-model="gender" v-bind:value="a">man
+  <input type="radio" v-model="gender" v-bind:value="b">woman
+  <br />
+  <span>value: {{gender}}</span>
+</section> -->
 
-  <!-- <ul>
-  <li v-for="(item, index) in items"
-  v-bind:class="{'purchased': item.purchased, 'notPurchased': !item.purchased}">
-  <span>{{ item.name }}</span>
-  <span v-if="item.purchased">Purchased!</span>
-  <button v-if="!item.purchased" v-on:click="buyItem(index)">Purchase</button>
+<!-- <ul>
+<li v-for="(item, index) in items"
+v-bind:class="{'purchased': item.purchased, 'notPurchased': !item.purchased}">
+<span>{{ item.name }}</span>
+<span v-if="item.purchased">Purchased!</span>
+<button v-if="!item.purchased" v-on:click="buyItem(index)">Purchase</button>
 </li>
 </ul>
 
