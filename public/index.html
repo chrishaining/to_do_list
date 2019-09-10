@@ -10,42 +10,49 @@
   <h1>To Do List</h1>
   <div id="app">
 
-    <input type="text" v-model="newTask">
+    <!-- <label for="new-task">Add a task</label> -->
+    <input type="text" id="new-task" v-model="newTask.name">
+    <input class="radio" type="radio" id="high" value="high" v-model="newTask.priority">High</input>
+    <input class="radio" type="radio" id="low" value="low" v-model="newTask.priority">Low</input>
+
     <button v-on:click="saveNewTask">Save task</button>
 
     <ul>
-      <li v-for="(task) in tasks">
-        <span>{{ task.name }}</span>
+      <li v-for="task in tasks">
+        <span>{{ task.name + " " + task.priority }}</span>
+        <!-- <span>{{ task.priority }}</span> -->
+
         <!-- <span id="priority">Priority: {{ task.priority }}</span> -->
         <!-- <span v-if="task.priority='high'">High!</span>
         <span v-if="task.priority='low'">Low!</span> -->
       </li>
     </ul>
 
+  </div>
 
+</body>
+</html>
 
     <!-- <input class="radio" type="radio" name="skill" value="high">High</input> -->
     <!-- <input type="radio" v-model="priority" value="high">High</input> -->
 
     <!-- <input type="radio" v-model="priority" value="low">Low</input> -->
-    <!-- <span>Priority: {{priority}}</span> -->
-
-  </div>
-
-  <!-- ****** -->
+    <!-- <span>Priority: {{priority}}</span>
 
 
 
 
-  <!-- <section>
+
+
+ <section>
   <h3>binding value</h3>
   <input type="radio" v-model="gender" v-bind:value="a">man
   <input type="radio" v-model="gender" v-bind:value="b">woman
   <br />
   <span>value: {{gender}}</span>
-</section> -->
+</section>
 
-<!-- <ul>
+  <ul>
 <li v-for="(item, index) in items"
 v-bind:class="{'purchased': item.purchased, 'notPurchased': !item.purchased}">
 <span>{{ item.name }}</span>
@@ -53,10 +60,5 @@ v-bind:class="{'purchased': item.purchased, 'notPurchased': !item.purchased}">
 <button v-if="!item.purchased" v-on:click="buyItem(index)">Purchase</button>
 </li>
 </ul>
-
-<input type="text" v-model="newItem">
-
-<button v-on:click="saveNewItem">Add new item</button> -->
-
-</body>
-</html>
+<input type="text" v-model="newItem"> -->
+<!--<button v-on:click="saveNewItem">Add new item</button> -->
